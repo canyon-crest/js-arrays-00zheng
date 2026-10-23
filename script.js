@@ -9,6 +9,7 @@
 // ============================================
 
 
+
 // ============================================
 //  WARM-UP: Favorite Colors
 // ============================================
@@ -18,6 +19,8 @@
 //         three strings: "red", "green", "blue"
 //         Use let to declare it.
 
+const colors = ["red", "green", "blue"];
+
 // STEP 2: Use a for loop to print each color.
 //         Each line should say exactly:
 //         "Color: red"
@@ -25,6 +28,9 @@
 //         "Color: blue"
 //         Use: console.log("Color: " + colors[i])
 
+for (let i = 0; i < colors.length; i++) {
+    console.log("Color: " + colors[i]);
+}
 
 // ============================================
 //  MAIN: Number Analyzer
@@ -34,6 +40,29 @@
 
 // STEP 3: Create an empty array called "numbers" using let.
 //         let numbers = [];
+
+const numbers = [];
+let sum = 0;
+let even = 0;
+largest = -1000;
+for (let i = 0; i < 4; i++) {
+    let num = parseFloat(prompt("Enter number " + (i + 1)));
+    numbers.push(num);
+    sum = sum + num;
+    if (num > largest) {
+        largest = num;
+    }
+    if (num % 2==0) {
+        even = even + 1;
+    }
+}
+
+console.log("Numbers: " + numbers.join(", "));
+console.log("Sum: " + sum);
+console.log("Average: " + sum/numbers.length);
+console.log("Even count: " + even);
+console.log("Largest: " + largest);
+
 
 // STEP 4: Use a for loop that runs 5 times (i = 0 to 4).
 //         Inside the loop:
@@ -54,6 +83,8 @@
 // STEP 6: Calculate the sum of all numbers.
 //         Use a for loop to add each number to a running total.
 //         Print: console.log("Sum: " + sum)
+
+
 
 // STEP 7: Calculate the average.
 //         Average = sum / numbers.length
